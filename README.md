@@ -1,40 +1,105 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">GevimaUI</h1>
 
-## Getting Started
+<div align="center">
 
-First, run the development server:
+A modern library for reactJS components
+
+[![NPM version][npm-image]][npm-url] [![NPM downloads][download-image]][download-url]
+
+[npm-image]: https://img.shields.io/npm/v/thxmx-ui?style=for-the-badge
+[npm-url]: https://www.npmjs.com/package/thxmx-ui
+[download-image]: https://img.shields.io/npm/dm/thxmx-ui.svg?style=for-the-badge
+[download-url]: https://npmjs.org/package/thxmx-ui
+
+</div>
+
+## 📚 Homepage
+
+- Visit [here](https://gevima-ui.vercel.app/)
+
+![s2](./public/ScreenshowHome.png)
+
+## ✨ Features
+
+- 📦 An uncommonly high quality set of React components.
+- 🛡 Written entirely in TypeScript with predictable static types.
+- ⚙️ A full suite of design resources and tools to facilitate development.
+
+## 📦 Install
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install gevima-ui
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+yarn add gevima-ui
+```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 🔨 Usage
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```tsx
+import React, { FC } from 'react';
+import { Button, Input } from 'gevima-ui';
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+const App: FC = () => (
+  <>
+    <Input label='Label' />
+    <Button>Button</Button>
+  </>
+);
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+export default App;
+```
 
-## Learn More
+## ⌨️ Development
 
-To learn more about Next.js, take a look at the following resources:
+### Node version
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+First of all let's use version 21 of node so we don't have compatibility problems, for this we can use [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) just run in the repository folder the command:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+$ nvm use
+```
 
-## Deploy on Vercel
+This command will look for the .nvmrc file and will find the version with which the project was created.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Prerequisites 🛠️
+
+Before you begin, ensure you have met the following requirements:
+
+Make sure you have:
+
+- Nodejs
+- npm or yarn
+- git
+
+## Let's Contribute 👍
+
+- Step 1 - Fork this repository.
+- Step 2 - Clone the repository to your local machine.
+- Step 3 - Resolve the bugs, mentions provided in the Issues section of the repository. Also add a description of what changes you have done.
+- Step 4 - Add the changes to your repository.
+- Step 5 - Create a PULL Request. And that's all.
+
+## What you can contribute in this repo? 👊
+
+- You can add your own competitive programming solutions.
+- There are various topics like Functionality, Modal aspect of thxmx-ui etc. You can contribute in them
+- You can contribute some Learning Resources in the READme.md File.
+- You can modify previous solutions if you feel like your solution has better Time or Space complexity.
+
+## Contributors 💡
+
+<table align="center">
+  <tr>
+   <td align="center"><a href="https://github.com/geamdev"><img src="https://github.com/geamdev.png" width="100px;" alt="Geampiere Jaramillo"/><br /><sub><b>Geampiere Jaramillo</b></sub></a><br />
+    <a href="https://github.com/geamdev/gevima-ui/commits/main/?author=geamdev" title="Code">💻</a></td>
+  </tr>
+</table>
+
+## Keywords 🤌
+
+TypeScript javascript Library ReactJS Components Microsoft compiler language UI React-ui framework
+frontend Design library-ui
