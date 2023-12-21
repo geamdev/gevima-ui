@@ -9,7 +9,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "@emotion/css": "^11.11.2",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -20,9 +21,7 @@
     "react-currency-input-field": "^3.6.12",
     "react-dom": "^18",
     "react-icons": "^4.12.0",
-    "react-tooltip": "^5.25.0"
-  },
-  "devDependencies": {
+    "react-tooltip": "^5.25.0",
     "@next/bundle-analyzer": "^13.5.6",
     "@next/eslint-plugin-next": "^13.5.6",
     "@storybook/addon-essentials": "^7.6.6",
