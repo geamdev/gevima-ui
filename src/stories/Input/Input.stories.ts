@@ -30,7 +30,7 @@ export const Default: Story = {
 export const Error: Story = {
   args: {
     label: 'Input',
-    message: 'Este campo es requerido',
+    error: 'Este campo es requerido',
     variant: 'error',
   },
   parameters: {
@@ -51,7 +51,7 @@ export const Error: Story = {
 export const Success: Story = {
   args: {
     label: 'Input',
-    message: 'Todo se ha completado con exito',
+    error: 'Todo se ha completado con exito',
     variant: 'success',
   },
   parameters: {

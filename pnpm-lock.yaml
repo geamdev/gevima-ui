@@ -68,9 +68,6 @@ devDependencies:
   clsx:
     specifier: ^2.0.0
     version: 2.0.0
-  downshift:
-    specifier: ^8.2.3
-    version: 8.2.3(react@18.2.0)
   eslint:
     specifier: ^8.55.0
     version: 8.56.0
@@ -5631,10 +5628,6 @@ packages:
       - supports-color
     dev: true
 
-  /compute-scroll-into-view@3.1.0:
-    resolution: {integrity: sha512-rj8l8pD4bJ1nx+dAkMhV1xB5RuZEyVysfxJqB1pRchh1KVvwOv9b7CGB8ZfjTImVv2oF+sYMUkMZq6Na5Ftmbg==}
-    dev: true
-
   /concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
@@ -6157,19 +6150,6 @@ packages:
   /dotenv@16.3.1:
     resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
     engines: {node: '>=12'}
-    dev: true
-
-  /downshift@8.2.3(react@18.2.0):
-    resolution: {integrity: sha512-1HkvqaMTZpk24aqnXaRDnT+N5JCbpFpW+dCogB11+x+FCtfkFX0MbAO4vr/JdXi1VYQF174KjNUveBXqaXTPtg==}
-    peerDependencies:
-      react: '>=16.12.0'
-    dependencies:
-      '@babel/runtime': 7.23.6
-      compute-scroll-into-view: 3.1.0
-      prop-types: 15.8.1
-      react: 18.2.0
-      react-is: 18.2.0
-      tslib: 2.6.2
     dev: true
 
   /duplexer@0.1.2:

@@ -7,7 +7,7 @@ import { Tooltip } from 'react-tooltip';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   variant?: 'error' | 'success';
-  message?: string;
+  error?: string;
   fullWidth?: boolean;
   icon?: React.ReactNode;
   currency?: string;
@@ -17,7 +17,8 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 const Input = forwardRef<
   Ref<HTMLInputElement | typeof CurrencyInput>,
   InputProps
->(({ fullWidth, message, icon, currency, label, variant, ...props }, ref) => {
+>(({ fullWidth, error, icon, currency, label, variant, ...props }, ref) => {
+  const { disabled } = props;
   const InputComponent = currency ? CurrencyInput : 'input';
 
   const currencyConfig = currency
@@ -25,13 +26,14 @@ const Input = forwardRef<
     : undefined;
 
   const inputClasses = clsx(
-    'mt-[1px] p-2 border border-[#cfdb5b2] rounded-lg w-full outline-none',
+    'mt-[1px] p-3 border border-[#cfdb5b2]  w-full outline-none text-sm font-semibold',
     {
       'pl-10': icon,
       'pr-4': currency,
       'text-black bg-[#f200892c]': variant === 'error',
       'text-black': variant === 'success',
     },
+    disabled ? 'bg-trasparent border-none' : 'bg-white rounded-lg',
   );
 
   const wrapperClasses = clsx('relative', {
@@ -41,11 +43,21 @@ const Input = forwardRef<
 
   return (
     <div className={wrapperClasses}>
-      <label className='text-xs font-bold mb-0.5 ml-0.5'>{label}</label>
+      {label && (
+        <label
+          className={clsx(
+            'text-xs font-bold mb-0.5 ml-0.5',
+            variant === 'error' ? 'text-[#ff0000]' : 'text-[#2d3748]',
+            disabled ? 'text-[#747A80]' : 'text-[#2d3748]',
+          )}
+        >
+          {label}
+        </label>
+      )}
       {icon && (
         <div
-          className='absolute inset-y-0 left-0 right-[15px] flex items-center pl-0.5 pointer-events-none mt-0.5'
-          data-tip={message}
+          className='absolute inset-y-0 right-4 flex items-center pl-0.5 pointer-events-none mt-0.5 z-50'
+          data-tip={error}
           data-for={`tooltip-${label}`}
         >
           {icon}
@@ -60,8 +72,8 @@ const Input = forwardRef<
           ref={ref as Ref<HTMLInputElement | typeof CurrencyInput>}
           {...props}
         />
-        {message && (
-          <div data-tooltip-id='tooltip' className='absolute top-3 right-4'>
+        {error && (
+          <div data-tooltip-id='tooltip' className='absolute top-4 right-4'>
             <Tooltip
               id='tooltip'
               place='top'
@@ -75,7 +87,7 @@ const Input = forwardRef<
                 color: '#fff',
               }}
             >
-              {message}
+              {error}
             </Tooltip>
             {variant === 'error' && (
               <IoAlertOutline className='text-white bg-[#f20089] rounded-full p-0.5 text-sm font-bold mt-0.5' />
@@ -86,6 +98,8 @@ const Input = forwardRef<
           </div>
         )}
       </div>
+
+      {disabled && <div className='h-[1px] bg-[#CFDBD5B2]' />}
     </div>
   );
 });

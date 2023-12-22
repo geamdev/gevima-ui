@@ -29,6 +29,7 @@ const Button = ({
       {...rest}
       className={clsx(
         'font-bold text-sm rounded-lg cursor-pointer inline-block px-8 py-3',
+        className,
         {
           'bg-[#0052ff] text-white transition-all hover:bg-[#ccdcff] hover:text-[#0052ff]':
             variant === 'filled',
@@ -46,7 +47,6 @@ const Button = ({
             loading,
           'opacity-30': loading && variant === 'filled',
         },
-        className,
       )}
       disabled={loading}
     >

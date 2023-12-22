@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import Select from '.';
 
-const meta = {
+const meta: Meta = {
   title: 'GevimaUI/Select',
   component: Select,
   parameters: {
@@ -13,7 +13,7 @@ const meta = {
         code: `
 <Select
   label="Select"
-  items={[
+  options={[
     { value: '1', label: 'Option 1' },
     { value: '2', label: 'Option 2' },
     { value: '3', label: 'Option 3' },
@@ -34,7 +34,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     label: 'Select',
-    items: [
+    options: [
       { value: '1', label: 'Option 1' },
       { value: '2', label: 'Option 2' },
       { value: '3', label: 'Option 3' },
@@ -54,7 +54,7 @@ export const Error: Story = {
         code: `
 <Select
   label="Select"
-  items={[
+  options={[
     { value: '1', label: 'Option 1' },
     { value: '2', label: 'Option 2' },
     { value: '3', label: 'Option 3' },
@@ -69,7 +69,7 @@ export const Error: Story = {
   args: {
     label: 'Select',
     error: 'This field is required',
-    items: [
+    options: [
       { value: '1', label: 'Option 1' },
       { value: '2', label: 'Option 2' },
       { value: '3', label: 'Option 3' },
