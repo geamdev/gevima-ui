@@ -31,7 +31,6 @@ export const Error: Story = {
   args: {
     label: 'Input',
     error: 'Este campo es requerido',
-    variant: 'error',
   },
   parameters: {
     docs: {
@@ -39,29 +38,7 @@ export const Error: Story = {
         code: `
 <Input
   label="Input"
-  message="Este campo es requerido"
-  variant="error"
-/>
-        `,
-      },
-    },
-  },
-};
-
-export const Success: Story = {
-  args: {
-    label: 'Input',
-    error: 'Todo se ha completado con exito',
-    variant: 'success',
-  },
-  parameters: {
-    docs: {
-      source: {
-        code: `
-<Input
-  label="Input"
-  message="Todo se ha completado con exito"
-  variant="success"
+  error="Este campo es requerido"
 />
         `,
       },

@@ -1,12 +1,10 @@
 import clsx from 'clsx';
 import { forwardRef, InputHTMLAttributes, Ref } from 'react';
 import CurrencyInput from 'react-currency-input-field';
-import { FaCheck } from 'react-icons/fa6';
 import { IoAlertOutline } from 'react-icons/io5';
 import { Tooltip } from 'react-tooltip';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  variant?: 'error' | 'success';
   error?: string;
   fullWidth?: boolean;
   icon?: React.ReactNode;
@@ -17,7 +15,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 const Input = forwardRef<
   Ref<HTMLInputElement | typeof CurrencyInput>,
   InputProps
->(({ fullWidth, error, icon, currency, label, variant, ...props }, ref) => {
+>(({ fullWidth, error, icon, currency, label, ...props }, ref) => {
   const { disabled } = props;
   const InputComponent = currency ? CurrencyInput : 'input';
 
@@ -30,8 +28,7 @@ const Input = forwardRef<
     {
       'pl-10': icon,
       'pr-4': currency,
-      'text-black bg-[#f200892c]': variant === 'error',
-      'text-black': variant === 'success',
+      'text-black bg-[#f200892c]': error,
     },
     disabled ? 'bg-trasparent border-none' : 'bg-white rounded-lg',
   );
@@ -47,7 +44,7 @@ const Input = forwardRef<
         <label
           className={clsx(
             'text-xs font-bold mb-0.5 ml-0.5',
-            variant === 'error' ? 'text-[#ff0000]' : 'text-[#2d3748]',
+            error ? 'text-[#ff0000]' : 'text-[#2d3748]',
             disabled ? 'text-[#747A80]' : 'text-[#2d3748]',
           )}
         >
@@ -78,22 +75,15 @@ const Input = forwardRef<
               id='tooltip'
               place='top'
               style={{
-                backgroundColor:
-                  variant === 'error'
-                    ? '#F20089'
-                    : variant === 'success'
-                      ? '#00C48C'
-                      : '#333',
+                backgroundColor: error ? '#F20089' : '#333',
                 color: '#fff',
               }}
             >
               {error}
             </Tooltip>
-            {variant === 'error' && (
+
+            {error && (
               <IoAlertOutline className='text-white bg-[#f20089] rounded-full p-0.5 text-sm font-bold mt-0.5' />
-            )}
-            {variant === 'success' && (
-              <FaCheck className='text-white bg-[#8dc572] rounded-full p-1 texxt-xs font-bold mt-0.5 ' />
             )}
           </div>
         )}
