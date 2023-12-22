@@ -6,10 +6,10 @@ A modern library for reactJS components
 
 [![NPM version][npm-image]][npm-url] [![NPM downloads][download-image]][download-url]
 
-[npm-image]: https://img.shields.io/npm/v/thxmx-ui?style=for-the-badge
-[npm-url]: https://www.npmjs.com/package/thxmx-ui
-[download-image]: https://img.shields.io/npm/dm/thxmx-ui.svg?style=for-the-badge
-[download-url]: https://npmjs.org/package/thxmx-ui
+[npm-image]: https://img.shields.io/npm/v/gevima-ui?style=for-the-badge
+[npm-url]: https://www.npmjs.com/package/gevima-ui
+[download-image]: https://img.shields.io/npm/dm/gevima-ui.svg?style=for-the-badge
+[download-url]: https://npmjs.org/package/gevima-ui
 
 </div>
 
@@ -86,7 +86,7 @@ Make sure you have:
 ## What you can contribute in this repo? 👊
 
 - You can add your own competitive programming solutions.
-- There are various topics like Functionality, Modal aspect of thxmx-ui etc. You can contribute in them
+- There are various topics like Functionality, Modal aspect of gevima-ui etc. You can contribute in them
 - You can contribute some Learning Resources in the READme.md File.
 - You can modify previous solutions if you feel like your solution has better Time or Space complexity.
 
